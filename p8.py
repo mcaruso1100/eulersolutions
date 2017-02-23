@@ -1,4 +1,3 @@
-from math import floor
 def multiply_consecutive(num):
     return reduce(lambda x,y:x*y,num)
 
