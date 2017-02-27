@@ -26,13 +26,12 @@ def is_prime(x):
         return False
     return all(x % i for i in range(3,int(math.sqrt(x)+1),2))
 
-def prime_gen(start=2):
+def prime_gen(limit,start=2,):
     x = start
-    while True:
+    while x<=limit:
         if is_prime(x):
             yield x
         x += 1
-if __name__=="__main__":
-    print next((islice(prime_gen(),10000,None)))
+
 
 
